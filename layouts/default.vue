@@ -15,8 +15,12 @@
 * {
   margin: 0;
 
-  .main {
-    position: relative;
+  .main-contents {
+    min-height: 100vh;
+
+    .main {
+      position: relative;
+    }
   }
 }
 </style>

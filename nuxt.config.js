@@ -1,3 +1,9 @@
+import axios from 'axios'
+
+// dotenv
+require('dotenv').config()
+const { API_URL, API_KEY } = process.env
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -14,10 +20,10 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: [{ src: '~/assets/sass/app.scss', lang: 'scss' }],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['~/plugins/filter.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -32,6 +38,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'nuxt-fontawesome',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -39,4 +46,38 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  // blog generate
+  generate: {
+    async routes() {
+      const pages = await axios
+        .get(process.env.API_URL + 'blog?limit=100', {
+          headers: { 'X=API=KEY': process.env.API_KEY },
+        })
+        .then((res) =>
+          require.data.contents.map((content) => ({
+            route: `/blog/${content.id}`,
+            payload: content,
+          }))
+        )
+      return pages
+    },
+
+    fallback: true,
+  },
+
+  env: {
+    API_URL,
+    API_KEY,
+  },
+
+  // fontawesome
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas'],
+      },
+    ],
+  },
 }

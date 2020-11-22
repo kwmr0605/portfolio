@@ -2,10 +2,10 @@
   <div class="header">
     <div class="logo">LOGO</div>
     <ul class="menu-area">
-      <li class="menu"><a class="menu-link" href="/">Home</a></li>
-      <li class="menu"><a class="menu-link" href="/about">About</a></li>
-      <li class="menu"><a class="menu-link" href="/work">Work</a></li>
-      <li class="menu"><a class="menu-link" href="/blog">Blog</a></li>
+      <li class="menu"><a class="link" href="/">Home</a></li>
+      <li class="menu"><a class="link" href="/about">About</a></li>
+      <li class="menu"><a class="link" href="/work">Work</a></li>
+      <li class="menu"><a class="link" href="/blog">Blog</a></li>
     </ul>
   </div>
 </template>
@@ -30,11 +30,6 @@
     .menu {
       display: inline;
       padding: 0 25px;
-
-      .menu-link {
-        color: #5c6464;
-        text-decoration: none;
-      }
     }
   }
 }
