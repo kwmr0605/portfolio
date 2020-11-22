@@ -4,7 +4,7 @@
     <ul class="menu-area">
       <li class="menu"><a class="link" href="/">Home</a></li>
       <li class="menu"><a class="link" href="/about">About</a></li>
-      <li class="menu"><a class="link" href="/work">Work</a></li>
+      <!-- <li class="menu"><a class="link" href="/work">Work</a></li> -->
       <li class="menu"><a class="link" href="/blog">Blog</a></li>
     </ul>
   </div>
