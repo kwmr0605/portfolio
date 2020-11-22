@@ -1,63 +1,142 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">portfolio</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="top">
+    <div class="main-visual">
+      <img class="image" src="~/assets/image/top.png" />
+      <div class="greetings">
+        <h1 class="greetings-title">Hello,</h1>
+        <p>
+          初めまして。<br />
+          フロントエンドエンジニアとして働いています。
+        </p>
+        <p>
+          このサイトは、普段勉強したことを備忘録として記すためのサイトです。
+        </p>
+        <div class="greetings-link">
+          <a href="/">More Profile →</a>
+        </div>
+      </div>
+    </div>
+    <div class="contents">
+      <h2 class="contents-title">Contents</h2>
+      <div class="contents-area">
+        <div class="article">
+          <img class="article-icon" src="~/assets/image/bird.png" />
+          <div class="article-text-area">
+            <h3 class="article-title">記事のタイトル</h3>
+            <p class="article-createdat">2020/10/10</p>
+          </div>
+        </div>
+      </div>
+      <div class="contents-area">
+        <div class="article">
+          <img class="article-icon" src="~/assets/image/bird.png" />
+          <div class="article-text-area">
+            <h3 class="article-title">記事のタイトル</h3>
+            <p class="article-createdat">2020/10/10</p>
+          </div>
+        </div>
+      </div>
+      <div class="contents-area">
+        <div class="article">
+          <img class="article-icon" src="~/assets/image/bird.png" />
+          <div class="article-text-area">
+            <h3 class="article-title">記事のタイトル</h3>
+            <p class="article-createdat">2020/10/10</p>
+          </div>
+        </div>
+      </div>
+      <div class="contents-area">
+        <div class="article">
+          <img class="article-icon" src="~/assets/image/bird.png" />
+          <div class="article-text-area">
+            <h3 class="article-title">記事のタイトル</h3>
+            <p class="article-createdat">2020/10/10</p>
+          </div>
+        </div>
+      </div>
+      <div class="contents-area">
+        <div class="article">
+          <img class="article-icon" src="~/assets/image/bird.png" />
+          <div class="article-text-area">
+            <h3 class="article-title">記事のタイトル</h3>
+            <p class="article-createdat">2020/10/10</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {}
-</script>
+<style lang="scss" scoped>
+.top {
+  color: #5c6464;
+  margin: 50px 100px 0;
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+  .main-visual {
+    display: flex;
+    width: 100%;
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+    .image {
+      float: left;
+      object-fit: cover;
+      width: 40%;
+    }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+    .greetings {
+      margin-left: 10%;
+      margin-top: 100px;
 
-.links {
-  padding-top: 15px;
+      .greetings-title {
+        margin: 0 0 30px;
+      }
+
+      .greetings-link {
+        margin-top: 50px;
+        text-align: right;
+
+        a {
+          color: #5c6464;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .contents {
+    display: table;
+    height: auto;
+    margin: 100px 200px 0;
+
+    .contents-title {
+      display: block;
+      margin: 0 0 30px;
+      width: 100%;
+    }
+
+    .contents-area {
+      margin-bottom: 20px;
+
+      .article-icon {
+        float: left;
+        height: 100px;
+        margin-right: 50px;
+        width: 100px;
+      }
+
+      .article-text-area {
+        display: table-cell;
+        height: 100px;
+        vertical-align: middle;
+
+        .article-title {
+          margin: 0 0 10px 0;
+        }
+
+        .article-createdat {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 </style>
