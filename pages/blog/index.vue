@@ -253,7 +253,7 @@ export default {
 
 <style lang="scss" scoped>
 .blog {
-  margin: 100px 15% 0;
+  margin: 0 15%;
 
   .search-box {
     border: 1px solid #5c6464;

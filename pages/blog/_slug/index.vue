@@ -32,7 +32,7 @@ export default {
 .article {
   height: auto;
   min-height: 1000px;
-  margin: 100px 15% 0;
+  margin: 0 15%;
 
   .article-title {
     margin-bottom: 10px;

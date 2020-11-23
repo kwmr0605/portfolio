@@ -59,10 +59,11 @@ export default {
 <style lang="scss" scoped>
 .top {
   color: #5c6464;
-  margin: 50px 5% 0;
+  margin: 0 5%;
 
   .main-visual {
     display: flex;
+    margin-bottom: 100px;
     width: 100%;
 
     .image {
@@ -89,7 +90,7 @@ export default {
   .contents {
     display: block;
     height: auto;
-    margin: 100px 10% 0;
+    margin: 0 10%;
 
     .contents-title {
       display: block;

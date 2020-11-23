@@ -13,7 +13,7 @@
 <style lang="scss" scoped>
 .header {
   color: #5c6464;
-  margin-top: 50px;
+  margin: 50px 0;
   text-align: center;
 
   .logo {
