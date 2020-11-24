@@ -1,7 +1,7 @@
 .link {
-  color: #5c6464;
+  color: var(--color-secondary);
   text-decoration: none;
-  transition: opacity 0.5s;
+  transition: all var(--base-transition);
 
   &:hover {
     opacity: 0.5;

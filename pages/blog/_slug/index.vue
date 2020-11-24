@@ -30,9 +30,11 @@ export default {
 
 <style lang="scss" scoped>
 .article {
+  color: var(--color-secondary);
   height: auto;
   min-height: 1000px;
   margin: 0 15%;
+  transition: all var(--base-transition);
 
   .article-title {
     margin-bottom: 10px;

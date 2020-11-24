@@ -6,6 +6,7 @@
         <Nuxt />
         <Background />
       </div>
+      <TypeSwitcher />
     </div>
     <Footer />
   </div>

@@ -58,8 +58,9 @@ export default {
 
 <style lang="scss" scoped>
 .top {
-  color: #5c6464;
+  color: var(--color-secondary);
   margin: 0 5%;
+  transition: all var(--base-transition);
 
   .main-visual {
     display: flex;

@@ -6,17 +6,19 @@
 
 <style lang="scss" scoped>
 .footer {
-  background: #5c6464;
+  background: var(--color-secondary);
   height: 30px;
   margin-top: 100px;
   text-align: center;
+  transition: all var(--base-transition);
   width: 100%;
 
   p {
-    color: #fff;
+    color: var(--color-primary);
     font-size: 12px;
     height: 100%;
     line-height: 30px;
+    transition: all var(--base-transition);
   }
 }
 </style>

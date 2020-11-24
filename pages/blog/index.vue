@@ -253,20 +253,25 @@ export default {
 
 <style lang="scss" scoped>
 .blog {
+  color: var(--color-secondary);
   margin: 0 15%;
+  transition: all var(--base-transition);
 
   .search-box {
-    border: 1px solid #5c6464;
+    border: 1px solid var(--color-secondary);
     border-radius: 100px;
     display: flex;
     height: 50px;
+    transition: all var(--base-transition);
     width: 100%;
 
     .category-list {
       background: transparent;
       border: none;
+      color: var(--color-secondary);
       cursor: pointer;
       padding: 0 10px;
+      transition: all var(--base-transition);
       width: 25%;
       -webkit-appearance: none;
 

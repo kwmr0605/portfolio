@@ -1,0 +1,22 @@
+:root {
+  /* TYPE COLOR */
+  --color-fire-primary:#EBD9D8;
+  --color-fire-secondary:#645D5C;
+
+  --color-leaf-primary:#E8F0EE;
+  --color-leaf-secondary:#5C6464;
+
+  --color-water-primary:#D8E0EB;
+  --color-water-secondary:#5C6064;
+
+  --color-bolt-primary: #EAEBD8;
+  --color-bolt-secondary:#64645C;
+
+  --color-primary: var(--color-leaf-primary);
+  --color-secondary: var(--color-leaf-secondary);
+
+  /* COMMON STYLES */
+  --base-transition: .2s ease-in-out;
+  --color-gray: #303030;
+  --max-width: 500px;
+}

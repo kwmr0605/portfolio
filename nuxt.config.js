@@ -20,7 +20,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [{ src: '~/assets/sass/app.scss', lang: 'scss' }],
+  css: [{ src: '~/assets/sass/app.scss', lang: 'scss' }, '~/assets/css/style'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: ['~/plugins/filter.js'],

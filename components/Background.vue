@@ -85,57 +85,77 @@
     left: 65%;
     position: absolute;
     top: 0;
+
+    path {
+      fill: var(--color-primary);
+      mix-blend-mode: multiply;
+      transition: all var(--base-transition);
+    }
   }
 
   .svg2 {
     left: 60%;
     position: absolute;
     top: 15%;
+
+    path {
+      fill: var(--color-primary);
+      mix-blend-mode: multiply;
+      transition: all var(--base-transition);
+    }
   }
 
   .svg3 {
-    animation: loop 10s -25s linear infinite;
     left: 60%;
     position: absolute;
     top: 50%;
 
-    @keyframes loop {
-      0% {
-        transform: translate(0, 0);
-      }
-      50% {
-        transform: translate(-5px, 15px);
-      }
+    path {
+      animation: loop 10s infinite alternate-reverse;
+      fill: var(--color-primary);
+      mix-blend-mode: multiply;
+      transition: all var(--base-transition);
 
-      100% {
-        transform: translate(0, 0);
+      @keyframes loop {
+        0% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(5px, 15px);
+        }
+
+        100% {
+          transform: translate(0, 0);
+        }
       }
     }
   }
 
   .svg4 {
-    animation: loop2 10s -25s linear infinite;
     left: 30%;
     position: absolute;
     top: 75%;
 
-    @keyframes loop2 {
-      0% {
-        transform: translate(0, 0);
-      }
-      50% {
-        transform: translate(15px, -10px);
-      }
+    path {
+      animation: loop2 10s infinite alternate-reverse;
+      fill: var(--color-primary);
+      mix-blend-mode: multiply;
+      transition: all var(--base-transition);
 
-      100% {
-        transform: translate(0, 0);
+      @keyframes loop2 {
+        0% {
+          transform: translate(0, 0) rotate(0);
+        }
+
+        50% {
+          transform: translate(15px, -10px) rotate(4deg);
+        }
+
+        100% {
+          transform: translate(0, 0) rotate(0);
+        }
       }
     }
-  }
-
-  path {
-    fill: #e8f0ee;
-    mix-blend-mode: multiply;
   }
 }
 </style>

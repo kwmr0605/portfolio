@@ -12,12 +12,12 @@
 
 <style lang="scss" scoped>
 .header {
-  color: #5c6464;
+  color: var(--color-secondary);
   margin: 50px 0;
   text-align: center;
+  transition: all var(--base-transition);
 
   .logo {
-    color: #5c6464;
     font-size: 50px;
   }
 
