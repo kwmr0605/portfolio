@@ -24,25 +24,27 @@
         @click="search(0)"
       />
     </div>
-    <div v-if="contents.length == 0" class="article-not-found">
-      <h2>記事が見つかりませんでした</h2>
-      <p>検索条件を変更して再度検索してください。</p>
-    </div>
-    <article
-      v-for="(content, index) in contents"
-      :key="`article-${index}`"
-      class="article-list"
-    >
-      <img class="article-icon" src="~/assets/image/bird.png" />
-      <div class="article-text-area">
-        <p class="article-created-at">
-          {{ content.publishedAt | formatDate }}
-        </p>
-        <nuxt-link :to="`/blog/${content.id}`" class="link">
-          {{ content.title }}
-        </nuxt-link>
+    <div class="article-result">
+      <div v-if="contents.length == 0" class="article-not-found">
+        <h2>記事が見つかりませんでした</h2>
+        <p>検索条件を変更して再度検索してください。</p>
       </div>
-    </article>
+      <article
+        v-for="(content, index) in contents"
+        :key="`article-${index}`"
+        class="article-list"
+      >
+        <img class="article-icon" src="~/assets/image/bird.png" />
+        <div class="article-text-area">
+          <p class="article-created-at">
+            {{ content.publishedAt | formatDate }}
+          </p>
+          <nuxt-link :to="`/blog/${content.id}`" class="link">
+            {{ content.title }}
+          </nuxt-link>
+        </div>
+      </article>
+    </div>
     <div class="pagination-area">
       <ul class="pagination">
         <li v-if="page != 0" class="prev" @click="showPrev()">
@@ -302,28 +304,40 @@ export default {
     }
   }
 
-  .article-list {
-    margin-top: 50px;
+  .article-result {
+    min-height: 700px;
 
-    .article-icon {
-      float: left;
-      height: 100px;
-      margin-right: 50px;
-      width: 100px;
+    .article-not-found {
+      margin-top: 50px;
+
+      p {
+        margin-top: 25px;
+      }
     }
 
-    .article-text-area {
-      display: table-cell;
-      height: 100px;
-      vertical-align: middle;
+    .article-list {
+      margin-top: 50px;
 
-      .article-title {
-        margin: 0 0 10px 0;
+      .article-icon {
+        float: left;
+        height: 100px;
+        margin-right: 50px;
+        width: 100px;
       }
 
-      .article-created-at {
-        font-size: 10px;
-        margin: 0;
+      .article-text-area {
+        display: table-cell;
+        height: 100px;
+        vertical-align: middle;
+
+        .article-title {
+          margin: 0 0 10px 0;
+        }
+
+        .article-created-at {
+          font-size: 10px;
+          margin: 0;
+        }
       }
     }
   }
