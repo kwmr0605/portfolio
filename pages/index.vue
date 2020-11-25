@@ -131,12 +131,23 @@ export default {
         height: 100px;
         margin-right: 50px;
         width: 100px;
+
+        @include mq(md) {
+          height: 50px;
+          margin-right: 20px;
+          width: 50px;
+        }
       }
 
       .article-text-area {
         display: table-cell;
         height: 100px;
         vertical-align: middle;
+
+        @include mq(md) {
+          display: block;
+          vertical-align: unset;
+        }
 
         .article-createdat {
           font-size: 10px;

@@ -193,6 +193,10 @@ export default {
             font-size: 14px;
             position: absolute;
             top: -6px;
+
+            @include mq(md) {
+              top: -8px;
+            }
           }
 
           .apple-icon {
