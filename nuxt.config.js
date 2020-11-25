@@ -61,7 +61,7 @@ export default {
           headers: { 'X-API-KEY': process.env.API_KEY },
         })
         .then((res) =>
-          require.data.contents.map((content) => ({
+          res.data.contents.map((content) => ({
             route: `/blog/${content.id}`,
             payload: content,
           }))
