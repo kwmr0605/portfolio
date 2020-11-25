@@ -14,6 +14,7 @@
 
 <style lang="scss">
 * {
+  font-family: 'M PLUS 1p';
   margin: 0;
 
   .main-contents {

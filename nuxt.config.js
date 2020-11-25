@@ -5,6 +5,11 @@ require('dotenv').config()
 const { API_URL, API_KEY } = process.env
 
 export default {
+  server: {
+    port: 8000,
+    host: '0.0.0.0',
+  },
+
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
@@ -39,6 +44,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'nuxt-fontawesome',
+    'nuxt-webfontloader',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -79,5 +85,12 @@ export default {
         icons: ['fas'],
       },
     ],
+  },
+
+  // google fonts
+  webfontloader: {
+    google: {
+      families: ['M+PLUS+1p'],
+    },
   },
 }
