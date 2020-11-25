@@ -58,7 +58,7 @@ export default {
     async routes() {
       const pages = await axios
         .get(process.env.API_URL + 'blog?limit=100', {
-          headers: { 'X=API=KEY': process.env.API_KEY },
+          headers: { 'X-API-KEY': process.env.API_KEY },
         })
         .then((res) =>
           require.data.contents.map((content) => ({
