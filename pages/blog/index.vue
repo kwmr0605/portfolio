@@ -254,6 +254,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/sass/mixin';
+@import '~/assets/sass/variables';
+
 .blog {
   color: var(--color-secondary);
   margin: 0 15%;
@@ -267,6 +270,12 @@ export default {
     transition: all var(--base-transition);
     width: 100%;
 
+    @include mq(md) {
+      border-radius: 10px;
+      display: block;
+      height: 100px;
+    }
+
     .category-list {
       background: transparent;
       border: none;
@@ -276,6 +285,15 @@ export default {
       transition: all var(--base-transition);
       width: 25%;
       -webkit-appearance: none;
+
+      @include mq(md) {
+        border-bottom: 1px solid var(--color-secondary);
+        border-radius: 0;
+        font-size: 16px;
+        height: 50px;
+        padding: 0 20px;
+        width: 100%;
+      }
 
       &:focus {
         outline: none;
@@ -287,6 +305,17 @@ export default {
       border: none;
       padding: 0 20px;
       width: 65%;
+
+      @include mq(md) {
+        font-size: 16px;
+        height: 50px;
+        width: 80%;
+      }
+
+      @include mq(sm) {
+        padding-left: 20px;
+        width: 70%;
+      }
 
       &:focus {
         outline: none;
@@ -323,12 +352,23 @@ export default {
         height: 100px;
         margin-right: 50px;
         width: 100px;
+
+        @include mq(md) {
+          height: 50px;
+          margin-right: 20px;
+          width: 50px;
+        }
       }
 
       .article-text-area {
         display: table-cell;
         height: 100px;
         vertical-align: middle;
+
+        @include mq(md) {
+          display: block;
+          vertical-align: unset;
+        }
 
         .article-title {
           margin: 0 0 10px 0;

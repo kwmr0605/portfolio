@@ -3,11 +3,8 @@
     <h1 class="article-title">
       {{ title }}
     </h1>
-    <p class="article-date">
-      公開日：{{ publishedAt | formatDate }}&nbsp;&nbsp;&nbsp;最終更新日：{{
-        updatedAt | formatDate
-      }}
-    </p>
+    <p class="article-published-date">公開日：{{ publishedAt | formatDate }}</p>
+    <p class="article-updated-date">最終更新日：{{ updatedAt | formatDate }}</p>
     <div class="post" v-html="body" />
   </div>
 </template>
@@ -29,6 +26,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/sass/mixin';
+@import '~/assets/sass/variables';
+
 .article {
   color: var(--color-secondary);
   height: auto;
@@ -40,8 +40,23 @@ export default {
     margin-bottom: 10px;
   }
 
-  .article-date {
+  .article-published-date {
+    display: inline-block;
+    margin-right: 10px;
+
+    @include mq(md) {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  .article-updated-date {
+    display: inline-block;
     margin-bottom: 50px;
+
+    @include mq(md) {
+      display: block;
+    }
   }
 }
 </style>
