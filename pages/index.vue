@@ -12,7 +12,7 @@
           このサイトは、普段勉強したことを備忘録として記すためのサイトです。
         </p>
         <div class="greetings-link">
-          <a class="link" href="/about">More Profile →</a>
+          <nuxt-link class="link" to="/about">More Profile →</nuxt-link>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="contents-link">
-        <a class="link" href="/blog">More Contents →</a>
+        <nuxt-link class="link" to="/blog">More Contents →</nuxt-link>
       </div>
     </div>
   </div>
@@ -57,9 +57,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/sass/mixin';
+@import '~/assets/sass/variables';
+
 .top {
   color: var(--color-secondary);
-  margin: 0 5%;
+  margin: 0 15%;
   transition: all var(--base-transition);
 
   .main-visual {
@@ -67,17 +70,32 @@ export default {
     margin-bottom: 100px;
     width: 100%;
 
+    @include mq(md) {
+      display: block;
+    }
+
     .image {
       float: left;
       object-fit: cover;
-      width: 40%;
+      width: 400px;
+
+      @include mq(md) {
+        float: none;
+        width: 100%;
+      }
     }
 
     .greetings {
       margin-left: 10%;
       margin-top: 100px;
 
+      @include mq(md) {
+        margin: 0;
+        width: 100%;
+      }
+
       .greetings-title {
+        font-size: 40px;
         margin: 0 0 30px;
       }
 
@@ -91,10 +109,16 @@ export default {
   .contents {
     display: block;
     height: auto;
-    margin: 0 10%;
+    margin: 0;
+
+    @include mq(md) {
+      margin: 0;
+      width: 100%;
+    }
 
     .contents-title {
       display: block;
+      font-size: 40px;
       margin: 0 0 30px;
       width: 100%;
     }

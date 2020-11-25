@@ -2,10 +2,12 @@
   <div class="header">
     <div class="logo">LOGO</div>
     <ul class="menu-area">
-      <li class="menu"><a class="link" href="/">Home</a></li>
-      <li class="menu"><a class="link" href="/about">About</a></li>
-      <!-- <li class="menu"><a class="link" href="/work">Work</a></li> -->
-      <li class="menu"><a class="link" href="/blog">Blog</a></li>
+      <li class="menu"><nuxt-link class="link" to="/">Home</nuxt-link></li>
+      <li class="menu">
+        <nuxt-link class="link" to="/about">About</nuxt-link>
+      </li>
+      <!-- <li class="menu"><nuxt-link class="link" href="/work">Work</nuxt-link></li> -->
+      <li class="menu"><nuxt-link class="link" to="/blog">Blog</nuxt-link></li>
     </ul>
   </div>
 </template>
