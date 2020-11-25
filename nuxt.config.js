@@ -10,8 +10,6 @@ export default {
     host: '0.0.0.0',
   },
 
-  mode: 'universal',
-
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
