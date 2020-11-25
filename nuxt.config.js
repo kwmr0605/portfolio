@@ -28,7 +28,7 @@ export default {
   css: [{ src: '~/assets/sass/app.scss', lang: 'scss' }, '~/assets/css/style'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ['~/plugins/filter.js'],
+  plugins: [{ src: '~/plugins/filter.js', ssr: true }],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
