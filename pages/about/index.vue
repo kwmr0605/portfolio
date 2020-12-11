@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="about-main-visual">
-      <img class="about-image" src="~/assets/image/top.png" />
+      <img class="about-image" src="~/assets/image/about.png" />
       <div class="about-text-area">
         <h1 class="about-title">About</h1>
         <p>初めまして。</p>
@@ -15,6 +15,7 @@
       </div>
     </div>
     <div class="skill">
+      <img class="skill-image" src="~/assets/image/skill.png" />
       <h2 class="skill-title">Skill Set</h2>
       <div v-for="skills in skillList" :key="skills.category">
         <h3>{{ skills.category }}</h3>
@@ -32,12 +33,11 @@
 </template>
 
 <script>
+// eslint-disable-next-line no-unused-vars
 import Slider from '~/components/Slider'
 import skillList from '~/assets/data/skillList.js'
 
 export default {
-  components: Slider,
-
   computed: {
     skillList: () => skillList,
   },
@@ -55,7 +55,7 @@ export default {
 
   .about-main-visual {
     display: flex;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     width: 100%;
 
     @include mq(md) {
@@ -64,8 +64,10 @@ export default {
 
     .about-image {
       float: left;
+      height: 40%;
+      mix-blend-mode: multiply;
       object-fit: cover;
-      width: 400px;
+      width: 40%;
 
       @include mq(md) {
         float: none;
@@ -94,11 +96,28 @@ export default {
   }
 
   .skill {
+    position: relative;
     width: 100%;
 
     .skill-title {
       font-size: 40px;
       margin: 0 0 30px;
+    }
+
+    .skill-image {
+      height: 240px;
+      mix-blend-mode: multiply;
+      object-fit: cover;
+      position: absolute;
+      right: 0;
+      top: -75px;
+      width: 240px;
+
+      @include mq(sm) {
+        height: 100%;
+        position: static;
+        width: 100%;
+      }
     }
 
     h3 {

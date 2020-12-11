@@ -1,7 +1,7 @@
 <template>
   <div class="top">
     <div class="main-visual">
-      <img class="image" src="~/assets/image/top.png" />
+      <img class="image" src="~/assets/image/top.jpeg" />
       <div class="greetings">
         <h1 class="greetings-title">Hello,</h1>
         <p>
@@ -76,8 +76,10 @@ export default {
 
     .image {
       float: left;
+      height: 40%;
+      mix-blend-mode: multiply;
       object-fit: cover;
-      width: 400px;
+      width: 40%;
 
       @include mq(md) {
         float: none;

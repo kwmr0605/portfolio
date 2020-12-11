@@ -303,6 +303,7 @@ export default {
     .search-query {
       background: transparent;
       border: none;
+      color: var(--color-secondary);
       padding: 0 20px;
       width: 65%;
 
@@ -364,6 +365,7 @@ export default {
         display: table-cell;
         height: 100px;
         vertical-align: middle;
+        width: 2000px;
 
         @include mq(md) {
           display: block;
