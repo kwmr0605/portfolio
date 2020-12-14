@@ -2,7 +2,19 @@ import axios from 'axios'
 
 // dotenv
 require('dotenv').config()
-const { API_URL, API_KEY } = process.env
+const { API_URL, API_KEY, BASE_URL } = process.env
+
+// path
+const baseUrl = process.env.BASE_URL
+
+// meta
+const lang = 'ja'
+const siteName = 'rbell'
+const siteDesc = 'rbellは普段勉強したことを備忘録として記すためのサイトです。'
+
+// images
+const iconImages = '/image/icon/'
+const ogpImages = baseUrl + '/image/ogp/'
 
 export default {
   server: {
@@ -15,7 +27,11 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'portfolio',
+    htmlAttrs: {
+      prefix: 'og: http://ogp.me/ns#',
+      lang,
+    },
+    titleTemplate: `%s | ${siteName}`,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -24,8 +40,30 @@ export default {
         name: 'google-site-verification',
         content: '_E99yXu5fG2d3hzRXelPs7VlIDFbaRGoESk4wp95eRs',
       },
+
+      // SEO関連
+      {
+        hid: 'description',
+        name: 'description',
+        content: siteDesc,
+      },
+
+      // OGP関連
+      { hid: 'og:site_name', property: 'og:site_name', content: siteName },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: baseUrl },
+      { hid: 'og:title', property: 'og:title', content: siteName },
+      { hid: 'og:description', property: 'og:description', content: siteDesc },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: `${ogpImages}ogp.jpg`,
+      },
+      { name: 'twitter:card', content: 'summary_large_image' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: iconImages + '/favicon.ico' },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -84,6 +122,7 @@ export default {
   env: {
     API_URL,
     API_KEY,
+    BASE_URL,
   },
 
   // fontawesome

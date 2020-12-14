@@ -250,6 +250,11 @@ export default {
       this.scrollTop()
     },
   },
+  head() {
+    return {
+      title: 'Blog',
+    }
+  },
 }
 </script>
 

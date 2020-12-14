@@ -41,6 +41,12 @@ export default {
   computed: {
     skillList: () => skillList,
   },
+
+  head() {
+    return {
+      title: 'About',
+    }
+  },
 }
 </script>
 

@@ -22,6 +22,25 @@ export default {
     )
     return data
   },
+
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.body.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, ''),
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          // content: this.url,
+        },
+        { hid: 'og/type', property: 'og:type', content: 'article' },
+      ],
+    }
+  },
 }
 </script>
 

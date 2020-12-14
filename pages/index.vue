@@ -53,6 +53,12 @@ export default {
     )
     return data
   },
+
+  head() {
+    return {
+      title: 'Top',
+    }
+  },
 }
 </script>
 
