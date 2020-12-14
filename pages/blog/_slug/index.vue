@@ -6,6 +6,38 @@
     <p class="article-published-date">公開日：{{ publishedAt | formatDate }}</p>
     <p class="article-updated-date">最終更新日：{{ updatedAt | formatDate }}</p>
     <div class="post" v-html="body" />
+    <div class="sns-area">
+      <h2>Share</h2>
+      <ul class="sns">
+        <li>
+          <a :href="twitterURL" target="_blank" rel="nofollow">
+            <font-awesome-icon
+              alt="twitter"
+              class="twitter-icon"
+              :icon="['fab', 'twitter']"
+            />
+          </a>
+        </li>
+        <li>
+          <a :href="facebookURL" target="_blank" rel="nofollow">
+            <font-awesome-icon
+              alt="facebook"
+              class="facebook-icon"
+              :icon="['fab', 'facebook-f']"
+            />
+          </a>
+        </li>
+        <li>
+          <a :href="lineURL" target="_blank" rel="nofollow">
+            <font-awesome-icon
+              alt="line"
+              class="line-icon"
+              :icon="['fab', 'line']"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -23,7 +55,35 @@ export default {
     return data
   },
 
+  computed: {
+    url() {
+      const baseUrl = process.env.BASE_URL
+      return baseUrl + this.$route.path
+    },
+
+    fixedTitle() {
+      return encodeURIComponent(`【${this.title}】`)
+    },
+
+    fixedContent() {
+      return encodeURIComponent(`【${this.title}】 ${this.url}`)
+    },
+
+    twitterURL() {
+      return `https://twitter.com/intent/tweet?url=${this.url}&text=${this.fixedTitle}&hashtags=rbell`
+    },
+
+    facebookURL() {
+      return `https://www.facebook.com/sharer/sharer.php?u=${this.url}&t=${this.fixedTitle}`
+    },
+
+    lineURL() {
+      return `http://line.me/R/msg/text/?${this.fixedContent}`
+    },
+  },
+
   head() {
+    const url = process.env.BASE_URL + this.$route.path
     return {
       title: this.title,
       meta: [
@@ -35,7 +95,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          // content: this.url,
+          content: url,
         },
         { hid: 'og/type', property: 'og:type', content: 'article' },
       ],
@@ -75,6 +135,60 @@ export default {
 
     @include mq(md) {
       display: block;
+    }
+  }
+
+  .sns-area {
+    margin-top: 100px;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .sns {
+      display: flex;
+      list-style: none;
+      margin-top: 20px;
+      padding: 0;
+
+      a {
+        border: 1px solid var(--color-secondary);
+        border-radius: 50%;
+        color: var(--color-secondary);
+        display: block;
+        font-size: 24px;
+        height: 50px;
+        margin-right: 15px;
+        position: relative;
+        width: 50px;
+
+        &:hover {
+          .twitter-icon {
+            color: #00aced;
+            transition: color var(--base-transition);
+          }
+
+          .facebook-icon {
+            color: #305097;
+            transition: color var(--base-transition);
+          }
+
+          .line-icon {
+            color: #1dcd00;
+            transition: color var(--base-transition);
+          }
+        }
+
+        .twitter-icon,
+        .facebook-icon,
+        .line-icon {
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          transition: color 0.3s;
+        }
+      }
     }
   }
 }
