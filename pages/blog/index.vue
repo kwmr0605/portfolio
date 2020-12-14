@@ -370,20 +370,19 @@ export default {
         display: table-cell;
         height: 100px;
         vertical-align: middle;
-        width: 2000px;
 
         @include mq(md) {
           display: block;
           vertical-align: unset;
         }
 
-        .article-title {
-          margin: 0 0 10px 0;
-        }
-
         .article-created-at {
           font-size: 10px;
           margin: 0;
+        }
+
+        .article-title {
+          margin: 0 0 10px 0;
         }
       }
     }
