@@ -57,7 +57,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: `${ogpImages}ogp.jpg`,
+        content: `${ogpImages}ogp.png`,
       },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],
