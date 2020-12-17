@@ -71,6 +71,10 @@ export default {
   margin: 0 15%;
   transition: all var(--base-transition);
 
+  @include mq(md) {
+    margin: 0 5%;
+  }
+
   .main-visual {
     display: flex;
     margin-bottom: 100px;

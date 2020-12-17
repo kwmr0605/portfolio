@@ -267,6 +267,10 @@ export default {
   margin: 0 15%;
   transition: all var(--base-transition);
 
+  @include mq(md) {
+    margin: 0 5%;
+  }
+
   .search-box {
     border: 1px solid var(--color-secondary);
     border-radius: 100px;

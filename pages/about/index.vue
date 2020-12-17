@@ -59,6 +59,10 @@ export default {
   margin: 0 15%;
   transition: all var(--base-transition);
 
+  @include mq(md) {
+    margin: 0 5%;
+  }
+
   .about-main-visual {
     display: flex;
     margin-bottom: 200px;
@@ -129,6 +133,10 @@ export default {
     h3 {
       font-size: 25px;
       margin-bottom: 30px;
+
+      @include mq(md) {
+        font-size: 20px;
+      }
     }
 
     .skill-area {
@@ -142,6 +150,10 @@ export default {
         float: left;
         font-size: 20px;
         width: 120px;
+
+        @include mq(md) {
+          font-size: 16px;
+        }
       }
     }
   }
