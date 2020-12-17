@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <p>&copy;Copyright 2020 Blog. All Rights Reserved.</p>
+    <p>&copy;Copyright 2020 rbell. All Rights Reserved.</p>
   </div>
 </template>
 
