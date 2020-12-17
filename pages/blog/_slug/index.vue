@@ -43,6 +43,8 @@
 
 <script>
 import axios from 'axios'
+import cheerio from 'cheerio'
+import hljs from 'highlight.js'
 
 export default {
   async asyncData({ params }) {
@@ -52,7 +54,17 @@ export default {
         headers: { 'X-API-KEY': process.env.API_KEY },
       }
     )
-    return data
+    const $ = cheerio.load(data.body)
+    $('code').each((_, elm) => {
+      const result = hljs.highlightAuto($(elm).text())
+      $(elm).html(result.value)
+      $(elm).addClass('hljs')
+    })
+
+    return {
+      ...data,
+      body: $.html(),
+    }
   },
 
   computed: {

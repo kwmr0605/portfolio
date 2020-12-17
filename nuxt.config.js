@@ -67,7 +67,11 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [{ src: '~/assets/sass/app.scss', lang: 'scss' }, '~/assets/css/style'],
+  css: [
+    { src: '~/assets/sass/app.scss', lang: 'scss' },
+    '~/assets/css/style',
+    { src: '~/node_modules/highlight.js/styles/hybrid.css', lang: 'css' },
+  ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: ['~/plugins/filter.js'],

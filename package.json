@@ -19,7 +19,9 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/moment": "^1.6.1",
+    "cheerio": "^1.0.0-rc.3",
     "core-js": "^3.6.5",
+    "highlight.js": "^10.4.1",
     "nuxt": "^2.14.6",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-webfontloader": "^1.1.0"
