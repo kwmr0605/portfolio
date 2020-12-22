@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="about-main-visual">
-      <img class="about-image" src="~/assets/image/about.png" />
+      <img class="about-image" src="~/assets/image/about.png" alt="about" />
       <div class="about-text-area">
         <h1 class="about-title">About</h1>
         <p>初めまして。</p>
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="skill">
-      <img class="skill-image" src="~/assets/image/skill.png" />
+      <img class="skill-image" src="~/assets/image/skill.png" alt="skill" />
       <h2 class="skill-title">Skill Set</h2>
       <div v-for="skills in skillList" :key="skills.category">
         <h3>{{ skills.category }}</h3>

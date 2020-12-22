@@ -1,7 +1,7 @@
 <template>
   <div class="top">
     <div class="main-visual">
-      <img class="image" src="~/assets/image/top.jpeg" />
+      <img class="image" src="~/assets/image/top.jpeg" alt="top" />
       <div class="greetings">
         <h1 class="greetings-title">Hello,</h1>
         <p>
@@ -20,7 +20,11 @@
       <h2 class="contents-title">Contents</h2>
       <div v-for="content in contents" :key="content.id" class="contents-area">
         <div class="article">
-          <img class="article-icon" src="~/assets/image/bird.png" />
+          <img
+            class="article-icon"
+            src="~/assets/image/bird.png"
+            alt="article-icon"
+          />
           <div class="article-text-area">
             <p class="article-createdat">
               {{ content.publishedAt | formatDate }}

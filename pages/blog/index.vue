@@ -34,7 +34,11 @@
         :key="`article-${index}`"
         class="article-list"
       >
-        <img class="article-icon" src="~/assets/image/bird.png" />
+        <img
+          class="article-icon"
+          src="~/assets/image/bird.png"
+          alt="article-icon"
+        />
         <div class="article-text-area">
           <p class="article-created-at">
             {{ content.publishedAt | formatDate }}
