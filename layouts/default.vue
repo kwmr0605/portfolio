@@ -17,6 +17,10 @@
   font-family: 'M PLUS 1p';
   margin: 0;
 
+  &::selection {
+    background: var(--color-primary);
+  }
+
   .main-contents {
     min-height: 100vh;
 
