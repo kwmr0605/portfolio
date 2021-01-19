@@ -3,8 +3,18 @@
     <h1 class="article-title">
       {{ title }}
     </h1>
-    <p class="article-published-date">公開日：{{ publishedAt | formatDate }}</p>
-    <p class="article-updated-date">最終更新日：{{ updatedAt | formatDate }}</p>
+    <div class="article-date">
+      <p class="article-published-date">
+        公開日：{{ publishedAt | formatDate }}
+      </p>
+      <p class="article-updated-date">
+        最終更新日：{{ updatedAt | formatDate }}
+      </p>
+    </div>
+    <p v-for="category in category" :key="category" class="article-category">
+      <font-awesome-icon :icon="['fa', 'tag']" class="article-category-icon" />
+      {{ category.category }}
+    </p>
     <div class="post" v-html="body" />
     <div class="sns-area">
       <h2>Share</h2>
@@ -139,23 +149,32 @@ export default {
     }
   }
 
-  .article-published-date {
-    display: inline-block;
-    margin-right: 10px;
+  .article-date {
+    margin-bottom: 10px;
 
-    @include mq(md) {
-      display: block;
-      margin: 0;
+    .article-published-date {
+      display: inline-block;
+      margin-right: 10px;
+
+      @include mq(md) {
+        display: block;
+        margin: 0;
+      }
+    }
+
+    .article-updated-date {
+      display: inline-block;
+
+      @include mq(md) {
+        display: block;
+      }
     }
   }
 
-  .article-updated-date {
+  .article-category {
     display: inline-block;
     margin-bottom: 50px;
-
-    @include mq(md) {
-      display: block;
-    }
+    margin-right: 15px;
   }
 
   .sns-area {
