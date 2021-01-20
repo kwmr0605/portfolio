@@ -11,10 +11,16 @@
         最終更新日：{{ updatedAt | formatDate }}
       </p>
     </div>
-    <p v-for="category in category" :key="category" class="article-category">
-      <font-awesome-icon :icon="['fa', 'tag']" class="article-category-icon" />
-      {{ category.category }}
-    </p>
+    <div class="article-category-area">
+      カテゴリー:
+      <p
+        v-for="category in category"
+        :key="category.id"
+        class="article-category"
+      >
+        #{{ category.category }}
+      </p>
+    </div>
     <div class="post" v-html="body" />
     <div class="sns-area">
       <h2>Share</h2>
@@ -171,10 +177,15 @@ export default {
     }
   }
 
-  .article-category {
-    display: inline-block;
+  .article-category-area {
+    display: block;
     margin-bottom: 50px;
-    margin-right: 15px;
+
+    .article-category {
+      display: inline-block;
+      margin-right: 10px;
+      width: max-content;
+    }
   }
 
   .sns-area {
