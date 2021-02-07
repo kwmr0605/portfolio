@@ -22,7 +22,7 @@
         <div class="article">
           <img
             class="article-icon"
-            src="~/assets/image/bird.png"
+            src="~/assets/image/blog.png"
             alt="article-icon"
           />
           <div class="article-text-area">
@@ -146,6 +146,7 @@ export default {
         float: left;
         height: 100px;
         margin-right: 50px;
+        mix-blend-mode: multiply;
         width: 100px;
 
         @include mq(md) {
