@@ -100,11 +100,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/sass/mixin';
+@import '~/assets/sass/variables';
+
 .type-switch-area {
   bottom: 5px;
   position: fixed;
   width: 100%;
   z-index: 3;
+
+  @include mq(md) {
+    bottom: 30px;
+  }
 
   .type-switch {
     align-items: center;

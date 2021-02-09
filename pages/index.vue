@@ -29,11 +29,9 @@
             <p class="article-createdat">
               {{ content.publishedAt | formatDate }}
             </p>
-            <h3 class="article-title">
-              <nuxt-link :to="`/blog/${content.id}`" class="link" href="#">
-                {{ content.title }}
-              </nuxt-link>
-            </h3>
+            <nuxt-link :to="`/blog/${content.id}`" class="link" href="#">
+              {{ content.title }}
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -150,9 +148,7 @@ export default {
         width: 100px;
 
         @include mq(md) {
-          height: 50px;
-          margin-right: 20px;
-          width: 50px;
+          margin-right: 0;
         }
       }
 
@@ -163,6 +159,7 @@ export default {
 
         @include mq(md) {
           display: block;
+          padding-top: 10px;
           vertical-align: unset;
         }
 
