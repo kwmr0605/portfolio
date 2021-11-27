@@ -71,7 +71,9 @@
       <li class="menu">
         <nuxt-link class="link" to="/about">About</nuxt-link>
       </li>
-      <!-- <li class="menu"><nuxt-link class="link" href="/work">Work</nuxt-link></li> -->
+      <li class="menu">
+        <nuxt-link class="link" to="/works">Works</nuxt-link>
+      </li>
       <li class="menu"><nuxt-link class="link" to="/blog">Blog</nuxt-link></li>
     </ul>
   </div>
