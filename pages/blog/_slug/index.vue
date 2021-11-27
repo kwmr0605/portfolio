@@ -26,7 +26,11 @@
       <h2>Share</h2>
       <ul class="sns">
         <li>
-          <a :href="twitterURL" target="_blank" rel="nofollow">
+          <a
+            :href="twitterURL"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
             <font-awesome-icon
               alt="twitter"
               class="twitter-icon"
@@ -35,7 +39,11 @@
           </a>
         </li>
         <li>
-          <a :href="facebookURL" target="_blank" rel="nofollow">
+          <a
+            :href="facebookURL"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
             <font-awesome-icon
               alt="facebook"
               class="facebook-icon"
@@ -44,7 +52,7 @@
           </a>
         </li>
         <li>
-          <a :href="lineURL" target="_blank" rel="nofollow">
+          <a :href="lineURL" target="_blank" rel="nofollow noopener noreferrer">
             <font-awesome-icon
               alt="line"
               class="line-icon"

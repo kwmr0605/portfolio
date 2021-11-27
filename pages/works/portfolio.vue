@@ -24,7 +24,12 @@
         ちなみにrbellという名前は「ring&nbsp;a&nbsp;bell(ピンとくる、感覚的に思い出す)」から来ています。
       </p>
       <div class="detail-link">
-        <a class="link" href="https://rbell.jp/" target="_blank">
+        <a
+          class="link"
+          href="https://rbell.jp/"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
           View Site →
         </a>
       </div>

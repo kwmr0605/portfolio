@@ -29,7 +29,12 @@
         土日の作業のため、ご依頼を受けてから納品まで約半年ほどかかりました。
       </p>
       <div class="detail-link">
-        <a class="link" href="https://craftgarage-guitars.com/" target="_blank">
+        <a
+          class="link"
+          href="https://craftgarage-guitars.com/"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
           View Site →
         </a>
       </div>

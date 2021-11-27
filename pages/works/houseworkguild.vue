@@ -38,7 +38,12 @@
       </p>
       <p>他にも、SNSのような画像投稿機能みたいなものも搭載しています。</p>
       <div class="detail-link">
-        <a class="link" href="https://houseworkguild.com/" target="_blank">
+        <a
+          class="link"
+          href="https://houseworkguild.com/"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
           View Site →
         </a>
       </div>
