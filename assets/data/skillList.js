@@ -15,9 +15,10 @@ export default [
   {
     category: 'バックエンド',
     data: [
-      { name: 'Java', value: 7 },
-      { name: 'PHP', value: 3 },
-      { name: 'Node.js', value: 3 },
+      { name: 'Java', value: 5 },
+      { name: 'Python', value: 6 },
+      { name: 'Django', value: 6 },
+      { name: 'PHP', value: 2 },
     ],
   },
   {
@@ -26,21 +27,18 @@ export default [
       { name: 'Apache', value: 4 },
       { name: 'Tomcat', value: 4 },
       { name: 'Nginx', value: 3 },
-      { name: 'AWS', value: 2 },
+      { name: 'AWS', value: 5 },
     ],
   },
   {
     category: 'その他',
     data: [
-      { name: 'Git', value: 8 },
-      { name: 'Solr', value: 4 },
-      { name: 'MySQL', value: 6 },
-      { name: 'Selenium', value: 5 },
+      { name: 'Git', value: 9 },
+      { name: 'MySQL', value: 5 },
+      { name: 'Selenium', value: 4 },
       { name: 'Cypress', value: 4 },
-      { name: 'Wordpress', value: 1 },
-      { name: 'Netlify', value: 6 },
-      { name: 'microCMS', value: 8 },
-      { name: 'adobe XD', value: 5 },
+      { name: 'Figma', value: 5 },
+      { name: 'Terraform', value: 5 },
     ],
   },
 ]

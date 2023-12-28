@@ -6,7 +6,7 @@
         src="~/assets/image/works/hwg.png"
         alt="housework guild"
       />
-      <h1 class="hwg-title">Housework Guild</h1>
+      <h1 class="hwg-title">Housework Guild(サイト閉鎖済み)</h1>
       <ul class="list">
         <li class="item">Java</li>
         <li class="item">SpringBoot</li>
