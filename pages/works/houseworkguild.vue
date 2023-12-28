@@ -37,16 +37,6 @@
         念の為誰でも使えるようにGoogleアカウントによるログイン機能(OAuth)をつけています。
       </p>
       <p>他にも、SNSのような画像投稿機能みたいなものも搭載しています。</p>
-      <div class="detail-link">
-        <a
-          class="link"
-          href="https://houseworkguild.com/"
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-        >
-          View Site →
-        </a>
-      </div>
     </div>
   </div>
 </template>
@@ -120,11 +110,6 @@ export default {
 
     p {
       margin-bottom: 30px;
-    }
-
-    .detail-link {
-      margin-top: 50px;
-      text-align: right;
     }
   }
 }
